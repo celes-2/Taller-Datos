@@ -1,0 +1,14 @@
+C:\Users\emari\Documents\Taller Datos\taller\bin\Debug\net10.0\taller.exe
+C:\Users\emari\Documents\Taller Datos\taller\bin\Debug\net10.0\taller.deps.json
+C:\Users\emari\Documents\Taller Datos\taller\bin\Debug\net10.0\taller.runtimeconfig.json
+C:\Users\emari\Documents\Taller Datos\taller\bin\Debug\net10.0\taller.dll
+C:\Users\emari\Documents\Taller Datos\taller\bin\Debug\net10.0\taller.pdb
+C:\Users\emari\Documents\Taller Datos\taller\obj\Debug\net10.0\taller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emari\Documents\Taller Datos\taller\obj\Debug\net10.0\taller.AssemblyInfoInputs.cache
+C:\Users\emari\Documents\Taller Datos\taller\obj\Debug\net10.0\taller.AssemblyInfo.cs
+C:\Users\emari\Documents\Taller Datos\taller\obj\Debug\net10.0\taller.csproj.CoreCompileInputs.cache
+C:\Users\emari\Documents\Taller Datos\taller\obj\Debug\net10.0\taller.dll
+C:\Users\emari\Documents\Taller Datos\taller\obj\Debug\net10.0\refint\taller.dll
+C:\Users\emari\Documents\Taller Datos\taller\obj\Debug\net10.0\taller.pdb
+C:\Users\emari\Documents\Taller Datos\taller\obj\Debug\net10.0\taller.genruntimeconfig.cache
+C:\Users\emari\Documents\Taller Datos\taller\obj\Debug\net10.0\ref\taller.dll
