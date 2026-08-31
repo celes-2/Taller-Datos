@@ -38,7 +38,6 @@ class ListaSimple: IRatingList
         
         }
         count++;
-        Console.WriteLine("Id de elemento agregado al inicio: " + value.RecordId);
     }
     public void AddAtIndex(RatingRecord value, int index)
     {
@@ -71,7 +70,6 @@ class ListaSimple: IRatingList
             Tail=nuevoNodo;
         }
         count++;
-        Console.WriteLine("Id de elemento agregado en la posición " + index + ": " + value.RecordId);
     }
     
       public bool RemoveById(int recordId)
@@ -92,7 +90,6 @@ class ListaSimple: IRatingList
         }
 
         count--;
-        Console.WriteLine("Elemento eliminado: " + recordId);
         return true;
     }
 
@@ -109,7 +106,6 @@ class ListaSimple: IRatingList
             {
                 Tail = anterior;
             }
-            Console.WriteLine("Elemento eliminado: " + recordId);
             count--;
             return true;
         }
@@ -117,7 +113,6 @@ class ListaSimple: IRatingList
         anterior = actual;
         actual = actual.Next;
     }
-    Console.WriteLine("No se encontró el elemento con RecordId: " + recordId);
     return false;
 }
 
@@ -129,14 +124,12 @@ class ListaSimple: IRatingList
         {
             if (actual.Value.RecordId == recordId)
             {
-                Console.WriteLine("Id de elemento encontrado: " + recordId);
                 return actual.Value;
 
             }
             actual = actual.Next;
 
         }
-        Console.WriteLine("No se encontró el elemento con Id: " + recordId);
 
         return null;
     }
@@ -155,7 +148,6 @@ class ListaSimple: IRatingList
             actual = actual.Next;
             i++;
         }
-        Console.WriteLine("Elemento en la posición " + position + "ID: " + actual.Value.RecordId);
         return actual.Value;
     }
     public void MostrarLista()
