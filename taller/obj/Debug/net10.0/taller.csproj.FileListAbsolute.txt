@@ -12,3 +12,4 @@ C:\Users\emari\Documents\Taller Datos\taller\obj\Debug\net10.0\refint\taller.dll
 C:\Users\emari\Documents\Taller Datos\taller\obj\Debug\net10.0\taller.pdb
 C:\Users\emari\Documents\Taller Datos\taller\obj\Debug\net10.0\taller.genruntimeconfig.cache
 C:\Users\emari\Documents\Taller Datos\taller\obj\Debug\net10.0\ref\taller.dll
+C:\Users\emari\Documents\Taller Datos\taller\obj\Debug\net10.0\taller.sourcelink.json

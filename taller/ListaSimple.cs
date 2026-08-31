@@ -11,11 +11,7 @@ class NodoSimple
 }
 
 
-//RemoveById Elimina el primer registro cuyo RecordId coincida. Devuelve false si no existe.
-//FindById Devuelve el primer registro cuyo RecordId coincida. Devuelve null si no existe.
-//GetAt Devuelve el elemento de la posición indicada; posiciones desde 0. 
-
-class ListaSimple 
+class ListaSimple: IRatingList
 {
     private NodoSimple Head;
     private NodoSimple Tail;
@@ -42,12 +38,13 @@ class ListaSimple
         
         }
         count++;
+        Console.WriteLine("Id de elemento agregado al inicio: " + value.RecordId);
     }
     public void AddAtIndex(RatingRecord value, int index)
     {
         if (index < 0 || index > count)
         {
-            Console.WriteLine("Fuera de rango.");
+            Console.WriteLine("Fuera de rango");
             return;
         }
 
@@ -74,6 +71,7 @@ class ListaSimple
             Tail=nuevoNodo;
         }
         count++;
+        Console.WriteLine("Id de elemento agregado en la posición " + index + ": " + value.RecordId);
     }
     
       public bool RemoveById(int recordId)
@@ -94,6 +92,7 @@ class ListaSimple
         }
 
         count--;
+        Console.WriteLine("Elemento eliminado: " + recordId);
         return true;
     }
 
@@ -110,6 +109,7 @@ class ListaSimple
             {
                 Tail = anterior;
             }
+            Console.WriteLine("Elemento eliminado: " + recordId);
             count--;
             return true;
         }
@@ -117,7 +117,7 @@ class ListaSimple
         anterior = actual;
         actual = actual.Next;
     }
-
+    Console.WriteLine("No se encontró el elemento con RecordId: " + recordId);
     return false;
 }
 
@@ -129,10 +129,14 @@ class ListaSimple
         {
             if (actual.Value.RecordId == recordId)
             {
+                Console.WriteLine("Id de elemento encontrado: " + recordId);
                 return actual.Value;
+
             }
             actual = actual.Next;
+
         }
+        Console.WriteLine("No se encontró el elemento con Id: " + recordId);
 
         return null;
     }
@@ -151,7 +155,21 @@ class ListaSimple
             actual = actual.Next;
             i++;
         }
-    
+        Console.WriteLine("Elemento en la posición " + position + "ID: " + actual.Value.RecordId);
         return actual.Value;
     }
+    public void MostrarLista()
+{
+    NodoSimple? actual = Head;
+
+    Console.Write("Lista: ");
+
+    while (actual != null)
+    {
+        Console.Write(actual.Value.RecordId + " ");
+        actual = actual.Next;
+    }
+
+    Console.WriteLine();
+}
 }

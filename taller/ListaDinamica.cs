@@ -1,4 +1,4 @@
-class ListaArreglo
+class ListaArreglo: IRatingList
 {
     private RatingRecord[] elementos;
     public int count;
@@ -29,6 +29,7 @@ class ListaArreglo
             }
 
             elementos = nuevoArreglo;
+            Console.WriteLine("Capacidad del arreglo aumento a: " + capacidad);
         }
 
         for (int i = count; i > 0; i--)
@@ -39,6 +40,7 @@ class ListaArreglo
         elementos[0] = value;
 
         count++;
+        Console.WriteLine("Id de elemento agregado al inicio: " + value.RecordId);
     }
     public void AddAtIndex(RatingRecord value, int index)
     {
@@ -60,6 +62,7 @@ class ListaArreglo
             }
 
             elementos = nuevoArreglo;
+            Console.WriteLine("Capacidad del arreglo aumento a: " + capacidad);
         }
 
         for (int i = count; i > index; i--)
@@ -70,6 +73,7 @@ class ListaArreglo
         elementos[index] = value;
 
         count++;
+        Console.WriteLine("Id de elemento agregado en la posición " + index + ": " + value.RecordId);
     }
     public bool RemoveById(int recordId)
 {
@@ -96,7 +100,6 @@ class ListaArreglo
 
                 RatingRecord[] nuevoArreglo = new RatingRecord[nuevaCapacidad];
 
-                // Copiar elementos
                 for (int j = 0; j < count; j++)
                 {
                     nuevoArreglo[j] = elementos[j];
@@ -104,12 +107,14 @@ class ListaArreglo
 
                 elementos = nuevoArreglo;
                 capacidad = nuevaCapacidad;
+                Console.WriteLine("Capacidad del arreglo reducida a: " + capacidad);
             }
+            Console.WriteLine("Elemento eliminado: " + recordId);
 
             return true;
         }
     }
-
+    Console.WriteLine("No se encontró el elemento: " + recordId);
     return false;
 }
     public RatingRecord? FindById(int recordId)
@@ -118,9 +123,12 @@ class ListaArreglo
         {
             if (elementos[i].RecordId == recordId)
             {
+                Console.WriteLine("Elemento encontrado: " + recordId);
                 return elementos[i];
+
             }
         }
+        Console.WriteLine("No se encontró el elemento: " + recordId);
         return null;
     }
     public RatingRecord GetAt(int position)
@@ -129,6 +137,19 @@ class ListaArreglo
         {
             throw new ArgumentOutOfRangeException("Posición fuera de rango.");
         }
+        Console.WriteLine("Elemento en la posición " + position + "ID: " + elementos[position].RecordId);
         return elementos[position];
     }
+    public void MostrarLista()
+    {
+    Console.Write("Lista: ");
+
+    for (int i = 0; i < count; i++)
+    {
+        Console.Write(elementos[i].RecordId + " ");
+    }
+
+    Console.WriteLine();
+    }
+
 }
