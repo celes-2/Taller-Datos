@@ -8,6 +8,10 @@ class ListaArreglo: IRatingList
     {
     get { return count; }
     }
+    public int Capacidad
+{
+    get { return capacidad; }
+}
 
     public ListaArreglo()
     {
@@ -29,7 +33,7 @@ class ListaArreglo: IRatingList
             }
 
             elementos = nuevoArreglo;
-            Console.WriteLine("Capacidad del arreglo aumento a: " + capacidad);
+            
         }
 
         for (int i = count; i > 0; i--)
@@ -61,7 +65,7 @@ class ListaArreglo: IRatingList
             }
 
             elementos = nuevoArreglo;
-            Console.WriteLine("Capacidad del arreglo aumento a: " + capacidad);
+            
         }
 
         for (int i = count; i > index; i--)
